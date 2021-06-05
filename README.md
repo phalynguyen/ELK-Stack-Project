@@ -77,25 +77,26 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- 10.0.0.7
+- 10.0.0.6
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Filebeat 
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat monitors and logs data that you allow and transfers them to Elasticsearch
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the filebeat-config.yml file to etc/ansible/files directory in the Ansible container.
+- Update the  file to include the host IP for the ELK server (10.0.0.4) to port 9200 which is the API over HTTP that communicates with Elasticsearch  
+- Run the playbook, and navigate to the ELK-VM by running SSH to the Private IP of the ELK Server
+- The Playbook is the filebeat-playbook.yml that is copied to the etc/anisbile/files 
+- Update etc/ansible/filebeat-config.yml file in order to have Ansible run on a specific machine. 
+- Navigate to http://[13.88.96.243]:5601/app/kibana to ensure installation worked as expected
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+### Commands to Intially Run Container
+- Run 'ssh RedAdmin@104.215.97.119'
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
