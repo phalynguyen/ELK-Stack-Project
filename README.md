@@ -37,7 +37,7 @@ The configuration details of each machine may be found below.
 | Jump Box | Gateway  | 10.0.0.4   | Linux            |
 | Web-1    | Server   | 10.0.0.7   | Linux            |
 | Web-2    | Server   | 10.0.0.6   | Linux            |
-| ELK- VM  | Server   | 10.1.04    | Linux            |
+| ELK- VM  |Monitoring| 10.1.04    | Linux            |
 
 ### Access Policies
 
@@ -53,7 +53,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | No                  | Private IP           |
+| Jump Box | yes                 | Private IP           |
 | Web-1    | No                  | 10.0.0.4             |
 | Web-2    | No                  | 10.0.0.4             |
 | ELK-VM   | No                  | 10.0.0.4             |
