@@ -98,5 +98,5 @@ SSH into the control node and follow the steps below:
 - Navigate to http://[13.88.96.243]:5601/app/kibana to ensure installation worked as expected
 
 ### Commands to Intially Run Container
-- Run 'ssh RedAdmin@104.215.97.119'
+- Run `ssh RedAdmin@104.215.97.119`
 
