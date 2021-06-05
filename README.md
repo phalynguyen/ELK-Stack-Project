@@ -90,11 +90,11 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the filebeat-config.yml file to etc/ansible/files directory in the Ansible container.
+- Copy the `filebeat-config.yml` file to `etc/ansible/files` directory in the Ansible container.
 - Update the  file to include the host IP for the ELK server (10.0.0.4) to port 9200 which is the API over HTTP that communicates with Elasticsearch  
 - Run the playbook, and navigate to the ELK-VM by running SSH to the Private IP of the ELK Server
-- The Playbook is the filebeat-playbook.yml that is copied to the etc/anisbile/files 
-- Update etc/ansible/filebeat-config.yml file in order to have Ansible run on a specific machine. 
+- The Playbook is the `filebeat-playbook.yml` that is copied to the `etc/anisbile/files` 
+- Update `etc/ansible/filebeat-config.yml` file in order to have Ansible run on a specific machine. 
 - Navigate to http://[13.88.96.243]:5601/app/kibana to ensure installation worked as expected
 
 ### Commands to Intially Run Create ELK Server
