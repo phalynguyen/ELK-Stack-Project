@@ -97,6 +97,14 @@ SSH into the control node and follow the steps below:
 - Update etc/ansible/filebeat-config.yml file in order to have Ansible run on a specific machine. 
 - Navigate to http://[13.88.96.243]:5601/app/kibana to ensure installation worked as expected
 
-### Commands to Intially Run Container
+### Commands to Intially Run Create ELK Server
 - Run `ssh RedAdmin@104.215.97.119`
+- Run `sudo docker ps` 
+- Run `sudo docker container list -a` to see the name of your container that you will start
+- Run `sudo docker container start [Name of container]`
+- Run `sudo docker container attach [Name of container]`
+- Get the SSH Key from the Ansible Container to copy into Jump Box `cat ~/.ssh/id_rsa.pub`
+- Create VM on Azure with this SSH Public Key
+- Add new VM to `hosts` file using the python3-pip service `<10.1.0.4> ansible_python_interpreter=/usr/bin/python`
+- Create Anible Playbook
 
