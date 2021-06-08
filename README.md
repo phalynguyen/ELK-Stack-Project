@@ -37,7 +37,7 @@ The configuration details of each machine may be found below.
 | Jump Box | Gateway  | 10.0.0.4   | Linux            |
 | Web-1    | Server   | 10.0.0.7   | Linux            |
 | Web-2    | Server   | 10.0.0.6   | Linux            |
-| ELK- VM  |Monitoring| 10.1.04    | Linux            |
+| ELK- VM  |Monitoring| 10.1.0.4    | Linux            |
 
 ### Access Policies
 
